@@ -1,6 +1,22 @@
 const clientTables =
     document.getElementById("clientTables")
 
+fetch("/settings")
+    .then(res => res.json())
+    .then(data => {
+
+        const clubTitle =
+            document.getElementById("clubTitle")
+
+        if (clubTitle) {
+
+            clubTitle.textContent =
+                data.clubName
+
+        }
+
+    })
+
 function loadTables() {
 
     fetch("/client-tables")
