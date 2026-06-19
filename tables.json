@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "status": "free",
+    "remainingSeconds": 0,
+    "startSeconds": 0,
+    "money": 0,
+    "mode": "time"
+  },
+  {
+    "id": 2,
+    "status": "free",
+    "remainingSeconds": 0,
+    "money": 0,
+    "mode": "time",
+    "startSeconds": 0
+  },
+  {
+    "id": 3,
+    "status": "free",
+    "remainingSeconds": 0,
+    "money": 0,
+    "mode": "time",
+    "startSeconds": 0
+  },
+  {
+    "id": 4,
+    "status": "free",
+    "remainingSeconds": 0,
+    "money": 0,
+    "mode": "time",
+    "startSeconds": 0
+  }
+]

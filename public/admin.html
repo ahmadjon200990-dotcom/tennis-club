@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Klubi - Admin Panel</title>
+
+    <link rel="stylesheet" href="owner/owner.css">
+</head>
+
+<body>
+    <button id="menuToggle" class="menu-toggle">
+        ☰
+    </button>
+
+    <div id="overlay" class="overlay"></div>
+
+    <div class="owner">
+        <aside class="sidebar">
+
+            <h2 class="logo" id="clubLogo">
+                Tennis Klubi
+            </h2>
+
+            <nav>
+
+                <button class="menu-btn active" data-page="dashboard">
+                    Asosiy
+                </button>
+
+                <button class="menu-btn" data-page="tables">
+                    Stollar
+                </button>
+
+            </nav>
+
+            <button id="logoutBtn" class="logout-btn">
+                Chiqish
+            </button>
+
+        </aside>
+
+        <main class="content">
+
+            <section id="dashboard" class="page active-page">
+
+                <div class="top">
+
+                    <div>
+                        <h1>Admin Panel</h1>
+                        <p>Tennis klub boshqaruv tizimi</p>
+                    </div>
+
+                    <div class="clock-box">
+                        <h3 id="time">00:00:00</h3>
+                        <span id="date">00.00.0000</span>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h4>Bugungi daromad</h4>
+                        <p id="todayIncome">0 so'm</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Haftalik daromad</h4>
+                        <p id="dashboardWeeklyIncome">0 so'm</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Band stollar</h4>
+                        <p id="busyTables">0</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Bo'sh stollar</h4>
+                        <p id="freeTables">1</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="tables" class="page">
+
+                <div class="table-top">
+                    <h2>Stollar</h2>
+                </div>
+
+                <div id="tablesContainer"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="admin.js"></script>
+
+    <script>
+        fetch("/check-admin")
+            .then(res => res.json())
+            .then(data => {
+
+                if (!data.success) {
+
+                    window.location.href = "/"
+
+                }
+
+            })
+    </script>
+
+</body>
+
+</html>
