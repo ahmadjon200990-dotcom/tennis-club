@@ -3,6 +3,15 @@ const pages = document.querySelectorAll(".page")
 const adminList =
     document.getElementById("adminList");
 
+fetch("/check-owner")
+    .then(res => res.json())
+    .then(data => {
+
+        if (!data.success) {
+            window.location.href = "/";
+        }
+
+    });
 let settings = {}
 const clubLogo =
     document.getElementById("clubLogo")

@@ -2,7 +2,15 @@ const menuBtns = document.querySelectorAll(".menu-btn")
 const pages = document.querySelectorAll(".page")
 const menuToggle =
     document.getElementById("menuToggle")
+fetch("/check-admin")
+    .then(res => res.json())
+    .then(data => {
 
+        if (!data.success) {
+            window.location.href = "/";
+        }
+
+    });
 const sidebar =
     document.querySelector(".sidebar")
 
