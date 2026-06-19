@@ -177,6 +177,10 @@ h1 {
     min-height: 20px;
 }
 
+.role {
+    margin-top: 50px;
+}
+
 
 @media (max-width: 678px) {
 
