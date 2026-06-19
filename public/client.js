@@ -86,7 +86,7 @@ function loadTables() {
 
 loadTables()
 
-setInterval(loadTables, 2000)
+setInterval(loadTables, 1000)
 
 function updateClock() {
 
